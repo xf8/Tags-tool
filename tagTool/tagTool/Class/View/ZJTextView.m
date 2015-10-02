@@ -9,7 +9,7 @@
 #import "ZJTextView.h"
 #import "UIView+ZJFrame.h"
 @interface ZJTextView ()
-@property (nonatomic, strong) UILabel *placeholderLabel;
+
 @end
 @implementation ZJTextView
 - (UILabel *)placeholderLabel{

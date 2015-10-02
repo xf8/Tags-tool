@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZJTextView : UITextView
+@property (nonatomic, strong) UILabel *placeholderLabel;
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic, copy) UIColor *placeholderColor;
 @end

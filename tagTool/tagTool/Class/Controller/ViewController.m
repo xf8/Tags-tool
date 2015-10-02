@@ -15,7 +15,7 @@
 #define ZJScreenW ([UIScreen mainScreen].bounds.size.height)
 #define ZJLogFunc NSLog(@"%s",__func__)
 @interface ViewController () <UITextViewDelegate>
-@property (nonatomic, weak) UITextView *textView;
+@property (nonatomic, weak) ZJTextView *textView;
 @property (nonatomic, weak) ZJTextBottomView *textBottomView;
 @end
 
@@ -50,11 +50,9 @@
     textV.backgroundColor = [UIColor whiteColor];
     textV.alwaysBounceVertical = YES;
     textV.frame = CGRectMake(0, 64, ZJScreenW, ZJScreenH - 64);
-    //    textV.frame = CGRectMake(0, 0, ZJScreenW, ZJScreenH);
     [self.view addSubview:textV];
     self.textView = textV;
     self.textView.delegate = self;
-    //    [self.textView becomeFirstResponder];
 }
 
 #pragma mark - 添加textBottomView
@@ -72,6 +70,9 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
     [self.textView becomeFirstResponder];
 }
 
@@ -105,7 +106,6 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

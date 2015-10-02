@@ -42,7 +42,6 @@
     // 删除以前的所有label
     [self.tagTextBtns makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.tagTextBtns removeAllObjects];
-    
     // 所有的标签文本
     for (int i = 0; i < tags.count; i++) {
         // 添加
@@ -120,7 +119,6 @@
     
     UIViewController *rootVC = self.window.rootViewController;
     // 获得发布控制器，跳转到发段子
-    // UIViewController *publishTextVC = rootVC.presentedViewController;
     [rootVC presentViewController:navVC animated:YES completion:nil];
 }
 

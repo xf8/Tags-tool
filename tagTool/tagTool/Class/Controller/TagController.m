@@ -94,12 +94,14 @@
 }
 
 - (void)cancel{
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)done{
     NSArray *tags = [self.tagBtns valueForKeyPath:@"currentTitle"];
     !self.getTagsBlock ? : self.getTagsBlock(tags);
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -116,8 +118,6 @@
         ZJTagButton *lastTagBtn = self.tagBtns.lastObject;
         [self tagDelete:lastTagBtn];
     }];
-    // [tagField becomeFirstResponder];
-    // [tagField layoutIfNeeded];
     [tagField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     [self.contentView addSubview:tagField];
     self.tagField = tagField;
@@ -148,7 +148,6 @@
     
     ZJTagButton *lastTagButton = self.tagBtns.lastObject;
     CGSize tagFieldTextSize = [self.tagField.text sizeWithAttributes:@{NSFontAttributeName : self.tagField.font}];
-    NSLog(@"tagFieldTextSize.width--%f",tagFieldTextSize.width);
     CGFloat rightWidth = self.contentView.width - ZJSmallMargin - CGRectGetMaxX(lastTagButton.frame);
     // 右侧剩余距离少于100，tagField就换行
     CGFloat tagFieldWidth = MAX(100, tagFieldTextSize.width);
@@ -186,6 +185,9 @@
     // 最多添加5个标签
     if (self.tagBtns.count == 5) {
         [SVProgressHUD showErrorWithStatus:@"最多添加5个标签" maskType:SVProgressHUDMaskTypeBlack];
+        self.tagField.text = nil;
+        [self.tagField endEditing:YES];
+        self.addTagButton.hidden = YES;
         return;
     }
     
@@ -242,7 +244,13 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.tagField endEditing:YES];
+    BOOL status = self.tagField.editing;
+    if (status == NO) {
+        [self.tagField becomeFirstResponder];
+    }else{
+        [self.tagField endEditing:status];
+    }
+    
 }
 
 #pragma mark - <UITextFieldDelegate>
