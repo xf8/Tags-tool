@@ -215,6 +215,7 @@
     self.addTagButton.hidden = YES;
     
 }
+
 // 点击删除标签
 - (void)tagDelete:(ZJTagButton *)deletedTagBtn{
     [UIView beginAnimations:nil context:nil];

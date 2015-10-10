@@ -50,7 +50,6 @@
         [self.bottomTagView addSubview:tagTextBtn];
         [self.tagTextBtns addObject:tagTextBtn];
     }
-    
     // 重新布局子控件
     [self setNeedsLayout];
 }

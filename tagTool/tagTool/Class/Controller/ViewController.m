@@ -43,7 +43,6 @@
 
 #pragma mark - textView
 - (void)addTextView{
-    
     ZJTextView *textV = [[ZJTextView alloc] init];
     textV.placeholder = @"把好玩的图片，好笑的段子或糗事发到这里，接受千万网友膜拜吧！发布违反国家法律内容的，我们将依法提交给有关部门处理。";
     textV.placeholderColor = [UIColor lightGrayColor];
@@ -63,8 +62,6 @@
     bottomV.y = [UIScreen mainScreen].bounds.size.height - bottomV.height;
     [self.view addSubview:bottomV];
     self.textBottomView = bottomV;
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
