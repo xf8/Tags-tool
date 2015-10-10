@@ -28,7 +28,7 @@
 		025BF5A71BAE44100096A971 /* ZJTextBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 025BF59E1BAE44100096A971 /* ZJTextBottomView.m */; settings = {ASSET_TAGS = (); }; };
 		025BF5A81BAE44100096A971 /* ZJTextBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025BF59F1BAE44100096A971 /* ZJTextBottomView.xib */; settings = {ASSET_TAGS = (); }; };
 		025BF5A91BAE44100096A971 /* ZJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 025BF5A11BAE44100096A971 /* ZJTextView.m */; settings = {ASSET_TAGS = (); }; };
-		025BF5AB1BAE610B0096A971 /* tag.gif in Resources */ = {isa = PBXBuildFile; fileRef = 025BF5AA1BAE610A0096A971 /* tag.gif */; settings = {ASSET_TAGS = (); }; };
+		0294298F1BC9415500BBF16C /* tag2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0294298E1BC9415500BBF16C /* tag2.gif */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 		025BF59F1BAE44100096A971 /* ZJTextBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJTextBottomView.xib; sourceTree = "<group>"; };
 		025BF5A01BAE44100096A971 /* ZJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTextView.h; sourceTree = "<group>"; };
 		025BF5A11BAE44100096A971 /* ZJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTextView.m; sourceTree = "<group>"; };
-		025BF5AA1BAE610A0096A971 /* tag.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tag.gif; sourceTree = "<group>"; };
+		0294298E1BC9415500BBF16C /* tag2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tag2.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +146,8 @@
 				025BF4DF1BAE38D90096A971 /* AppDelegate.m */,
 				025BF4E41BAE38D90096A971 /* Main.storyboard */,
 				025BF4E71BAE38D90096A971 /* Assets.xcassets */,
-				025BF5AA1BAE610A0096A971 /* tag.gif */,
 				025BF4E91BAE38DA0096A971 /* LaunchScreen.storyboard */,
+				0294298E1BC9415500BBF16C /* tag2.gif */,
 				025BF4EC1BAE38DA0096A971 /* Info.plist */,
 				025BF4DB1BAE38D90096A971 /* Supporting Files */,
 			);
@@ -356,11 +356,11 @@
 			files = (
 				025BF5A81BAE44100096A971 /* ZJTextBottomView.xib in Resources */,
 				025BF4EB1BAE38DA0096A971 /* LaunchScreen.storyboard in Resources */,
-				025BF5AB1BAE610B0096A971 /* tag.gif in Resources */,
 				025BF52E1BAE3D920096A971 /* SVProgressHUD.bundle in Resources */,
 				025BF4E81BAE38D90096A971 /* Assets.xcassets in Resources */,
 				025BF52B1BAE3D920096A971 /* LICENSE.txt in Resources */,
 				025BF4E61BAE38D90096A971 /* Main.storyboard in Resources */,
+				0294298F1BC9415500BBF16C /* tag2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
